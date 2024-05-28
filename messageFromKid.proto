@@ -1,0 +1,11 @@
+syntax = "proto2";
+package persist;
+option java_package = "de.goforfun.lorakid.domain.payload";
+
+message MessageFromKid {
+  required uint32 batteryLevel = 1;
+}
+
+message MessageToKid {
+
+}

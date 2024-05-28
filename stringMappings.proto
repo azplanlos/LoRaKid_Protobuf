@@ -1,0 +1,21 @@
+syntax = "proto2";
+package persist;
+option java_package = "de.goforfun.lorakid.domain.persist";
+
+message MappingsMessage {
+  repeated StringMappingMessage mappings = 1;
+}
+
+message StringMappingMessage {
+  required uint32 code = 1;
+  required string kurz = 2;
+  required string text = 3;
+  repeated string antwort = 4;
+  repeated DisplayType anzeige = 5;
+  map<string, int32> auswahl = 6;
+}
+
+enum DisplayType {
+  KID = 1;
+  PARENT = 2;
+}
