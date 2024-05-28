@@ -1,5 +1,5 @@
 syntax = "proto2";
-package persist;
+package Payload;
 option java_package = "de.goforfun.lorakid.domain.payload";
 
 message MessageFromKid {
@@ -10,9 +10,5 @@ message MessageFromKid {
 message KidPayload {
   required uint32 code = 1;
   optional uint32 subSelection = 2;
-  optional bool isAnswer = 3 [default = false];
-}
-
-message MessageToKid {
-
+  optional bool isAnswer = 3;
 }
