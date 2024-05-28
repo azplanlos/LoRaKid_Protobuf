@@ -4,6 +4,13 @@ option java_package = "de.goforfun.lorakid.domain.payload";
 
 message MessageFromKid {
   required uint32 batteryLevel = 1;
+  repeated KidPayload payload = 2;
+}
+
+message KidPayload {
+  required uint32 code = 1;
+  optional uint32 subSelection = 2;
+  optional bool isAnswer = 3 [default = false];
 }
 
 message MessageToKid {
