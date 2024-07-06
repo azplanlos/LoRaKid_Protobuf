@@ -12,3 +12,8 @@ message KidPayload {
   optional uint32 subSelection = 2;
   optional bool isAnswer = 3;
 }
+
+message Heartbeat {
+  required uint32 batteryLevel = 25;
+  required uint32 temp = 26;
+}
