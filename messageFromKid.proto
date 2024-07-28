@@ -13,6 +13,16 @@ message KidPayload {
   optional bool isAnswer = 3;
 }
 
+enum Sender {
+  PAPA = 1;
+  MAMA = 2;
+}
+
+message MessageToKid {
+  required Sender sender = 11;
+  required KidPayload payload = 12;
+}
+
 message Heartbeat {
   required uint32 batteryLevel = 25;
   required uint32 temp = 26;
